@@ -6,9 +6,9 @@ spring:
     name: ai-powered-customer-support-platform
 
   datasource:
-    url: jdbc:postgresql://localhost:5432/aidb
-    username: contactuser
-    password: contactpass
+    url: ${SPRING_DATASOURCE_URL}
+    username: ${SPRING_DATASOURCE_USERNAME}
+    password: ${SPRING_DATASOURCE_PASSWORD}
     driver-class-name: org.postgresql.Driver
 
   jpa:
@@ -31,3 +31,7 @@ openai:
   api-key: ${OPENAI_API_KEY}
   model: gpt-5-mini
   base-url: https://api.openai.com/v1
+
+ollama:
+  base-url: ${OLLAMA_BASE_URL}
+  model: ${OLLAMA_MODEL}
