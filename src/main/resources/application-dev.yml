@@ -2,6 +2,9 @@ server:
   port: 8081
 
 spring:
+  config:
+    import: optional:file:.env.dev[.properties]
+
   application:
     name: ai-powered-customer-support-platform
 
